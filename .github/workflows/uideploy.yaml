@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-      uses: actions/checkout@v4
+        uses: actions/checkout@v4
 
-     - name: Update workflow YAML
-      run: |
-        touch .github/workflows/create.yaml
-        echo "# Updated at $(date)" >> .github/workflows/update-workflow.yml
+      - name: Update workflow YAML
+        run: touch .github/workflows/create.yaml
+        
+   
 
       - name: Set Git config
         run: |
