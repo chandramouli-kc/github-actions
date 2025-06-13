@@ -25,8 +25,7 @@ jobs:
       - name: Make changes to workflow file
         run: |
           echo "# Auto-generated workflow" >> .github/workflows/create.yaml
-          git add .github/workflows/update-repo.yaml
-          git commit -m "Update update-repo.yaml" || echo "No changes to commit"
+          
 
       - name: Push changes using PAT
         env:
@@ -34,7 +33,7 @@ jobs:
         run: |
           git config --global user.name "chandramouli-kc"
           git config --global user.email "kcmouli3s@gmail.com"
-          
+          git remote v
           git add .github/workflows/create.yaml
           git commit -m "create new yaml file"
           git push origin master
