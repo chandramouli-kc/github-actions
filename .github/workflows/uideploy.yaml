@@ -32,7 +32,7 @@ jobs:
         env:
           PAT_TOKEN: ${{ secrets.CLASSIC_PAT }}
         run: |
-          #git remote set-url origin https://${PAT_TOKEN}@github.com/UMBFC/aws-umb-Ach-Shared.git
+          git remote set-url origin https://${CLASSIC_PAT}@github.com/chandramouli-kc/github-actions.git
           git push origin master
   #   - uses: actions/checkout@master
   #  # - uses: jakejarvis/s3-sync-action@master
