@@ -1,7 +1,9 @@
-name: Push Workflow
+name: Upload Website
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+    - master
 permissions:
   contents: write
   actions: write
