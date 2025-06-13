@@ -41,4 +41,4 @@ jobs:
           git add .github/workflows/create.yaml
           git commit -m "Add workflow file"
           git remote set-url origin https://chandramouli-kc:${PAT_TOKEN}@github.com/chandramouli-kc/github-actions.git
-          git push origin main
+          git push origin master
