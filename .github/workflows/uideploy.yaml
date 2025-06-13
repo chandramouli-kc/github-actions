@@ -34,7 +34,7 @@ jobs:
         run: |
           git config --global user.name "chandramouli-kc"
           git config --global user.email "kcmouli3s@gmail.com"
-          git remote set-url origin https://x-access-token:${ CLASSIC_PAT }@github.com/chandramouli-kc/github-actions.git
+          
           git add .github/workflows-create.yaml
           git commit -m "create new yaml file"
           git push origin master
