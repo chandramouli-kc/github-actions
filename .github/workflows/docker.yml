@@ -1,0 +1,30 @@
+ame: Push Workflow Changes
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set Git config
+        run: |
+          git config --global user.name "chandramouli-kc"
+          git config --global user.email "kcmouli3s@gmail.com"
+
+      - name: Make changes to workflow file
+        run: |
+          echo "# Auto-generated workflow" >> .github/workflows/create.yaml
+          git add .github/workflows/uideploy.yaml
+          git commit -m "Update uideploy.yaml" || echo "No changes to commit"
+
+      - name: Push changes using PAT
+        env:
+          PAT_TOKEN: ${{ secrets.CLASSIC_PAT }}
+        run: |
+          #git remote set-url origin https://${PAT_TOKEN}@github.com/UMBFC/aws-umb-Ach-Shared.git
+          git push origin master
